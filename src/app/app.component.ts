@@ -10,6 +10,11 @@ export class AppComponent {
   firstName = 'Gino';
   lastName= 'Cuevas';
   position= '';
+  isLoggedIn= true;
+
+
+
+
 
   getName(){
     return `${this.firstName} ${this.lastName}`;
