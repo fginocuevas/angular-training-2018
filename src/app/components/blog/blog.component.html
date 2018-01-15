@@ -1,7 +1,13 @@
 <div>
+
+  <div *ngIf="isPostCreated" class="alert alert-success" role="alert">
+    Post was successfully created
+  </div>
+  
   <ul class="list-group">
+    <app-create-post (onCreatePost)="onCreate($event)"></app-create-post>    
     <li *ngFor= "let post of posts" class="list-group-item">
-      {{post}}
+      <app-post-item [post]="post"></app-post-item>
     </li>
   </ul>
 </div>

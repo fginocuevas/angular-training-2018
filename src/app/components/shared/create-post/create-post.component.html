@@ -1,0 +1,7 @@
+<div>
+  <form action="#">
+    <input type="text" name="title" [(ngModel)]="post.title" placeholder="Title"><br>
+    <textarea name="body" [(ngModel)] = "post.body" id="" cols="30" rows="10" placeholder="Body"></textarea><br>
+    <button type="button" (click)="createPost()">Create Post</button>
+  </form>
+</div>

@@ -9,7 +9,13 @@ import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CustomHighlightDirective } from './directives/custom-highlight.directive';
 import { RoutingModule } from './routing.module';
-import { TestComponent } from './test/test.component'
+import { TestComponent } from './test/test.component';
+import { PostService } from './services/post.service';
+import { HttpClientModule} from '@angular/common/http';
+import { PostItemComponent } from './components/post/post-item/post-item.component';
+import { CreatePostComponent } from './components/shared/create-post/create-post.component';
+import { PostDetailComponent } from './components/shared/post-detail/post-detail.component';
+
 
 
 @NgModule({
@@ -20,14 +26,18 @@ import { TestComponent } from './test/test.component'
     ContactComponent,
     CustomHighlightDirective,
     NavbarComponent,
-    TestComponent
+    TestComponent,
+    PostItemComponent,
+    CreatePostComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RoutingModule  
+    RoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
